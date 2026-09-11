@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiterCell</title>
+    <title>PiterCell — Assistência Técnica Especializada</title>
+    <meta name="description" content="Conserto de celulares com rapidez, peças de qualidade e garantia. Troca de tela, bateria, conector de carga e mais.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/color.css">
@@ -15,27 +16,36 @@
     <div class="flex-grow-1">
 
         <header class="w-100" id="nav">
-            <nav class="navbar navbar-expand-sm shadow-sm">
+            <nav class="navbar navbar-expand-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex align-items-center" href="#">
-                        <img src="assets/img/logo_piterCell.jpg" style="width: 40px;" class="rounded-circle me-2">
-                        <span class="text-light">PiterCell</span>
+                        <img src="assets/img/logo_piterCell.jpg" alt="Logo PiterCell" class="rounded-circle me-2"
+                            style="width: 40px; height: 40px; object-fit: cover;">
+                        <span>PiterCell</span>
                     </a>
-
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        aria-label="Abrir menu de navegação">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav ms-auto align-items-sm-center">
                             <li class="nav-item">
-                                <a class="nav-link  text-light" href="#">Entrar</a>
+                                <a class="nav-link" href="#servicos">Serviços</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  text-light" href="#">Cadastra-se</a>
+                                <a class="nav-link" href="#diferenciais">Funcionamento</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#duvidas">Dúvidas</a>
+                            </li>
+                            <li class="nav-item ms-sm-2 mt-2 mt-sm-0">
+                                <button type="button" class="btn btn-outline-contato btn-sm rounded-pill px-3"
+                                    data-bs-toggle="modal" data-bs-target="#contatoModal">
+                                    Endereço e horário
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -43,122 +53,230 @@
             </nav>
         </header>
 
-        <section class="bg-light py-5 border-bottom mt-3">
+        <!-- HERO -->
+        <section class="hero-section py-5">
             <div class="container text-center py-4">
-                <h1 class="display-5 fw-bold text-dark">Assistência Técnica Especializada</h1>
-                <p class="lead text-muted mx-auto" style="max-width: 600px;">
-                    Consertamos seu celular com rapidez, peças de qualidade e garantia profissional. Venha fazer um
-                    orçamento!
+                <h1 class="display-5 fw-bold hero-title">Assistência técnica que resolve na hora</h1>
+                <p class="lead hero-subtitle mx-auto" style="max-width: 620px;">
+                    Consertamos seu celular com rapidez, peças de qualidade e garantia profissional.
+                    Peça um orçamento sem compromisso pelo WhatsApp.
                 </p>
                 <a href="https://wa.me/11956975428" target="_blank" id="orcamento"
-                    class="btn btn-primary btn-lg rounded-pill px-4 mt-2">Fazer Orçamento</a>
+                    class="btn btn-lg rounded-pill px-4 mt-2">
+                    Fazer orçamento pelo WhatsApp
+                </a>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+                    <span class="badge trust-badge rounded-pill px-3 py-2">Garantia de 90 dias</span>
+                    <span class="badge trust-badge rounded-pill px-3 py-2">Atendimento no mesmo dia</span>
+                    <span class="badge trust-badge rounded-pill px-3 py-2">Peças de qualidade</span>
+                </div>
             </div>
         </section>
 
-        <main class="container my-5">
+        <!-- CARROSSEL DE DESTAQUES -->
+        <section class="promo-band py-4">
+            <div id="promoCarousel" class="carousel slide container" data-bs-ride="carousel" data-bs-interval="4500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="promo-slide">
+                            <span class="promo-icon" aria-hidden="true">🛡️</span>
+                            <div>
+                                <h5 class="mb-1">Garantia de 90 dias</h5>
+                                <p class="mb-0">Todo reparo sai com garantia contra defeito de fabricação da peça.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="promo-slide">
+                            <span class="promo-icon" aria-hidden="true">⚡</span>
+                            <div>
+                                <h5 class="mb-1">Conserto rápido</h5>
+                                <p class="mb-0">A maioria dos reparos fica pronta em até 1 hora após a aprovação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="promo-slide">
+                            <span class="promo-icon" aria-hidden="true">🔩</span>
+                            <div>
+                                <h5 class="mb-1">Peças de qualidade</h5>
+                                <p class="mb-0">Trabalhamos com peças selecionadas para durar mais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
 
-            <h2 class="text-center mb-4 fw-bold">Nossos Serviços</h2>
+        <main class="container my-5" id="servicos">
+
+            <h2 class="text-center mb-4 fw-bold section-title">Nossos serviços</h2>
 
             <div class="row g-4 row-cols-1 row-cols-md-3">
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3 position-relative">
+                        <span class="badge card-badge">Mais procurado</span>
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Troca de Tela</h5>
-                            <p class="card-text text-muted">Telas quebradas ou sem touch? Resolvemos na hora com telas
-                                de alta qualidade.</p>
+                            <img src="assets/img/tela.jpg" alt="Troca de tela" class="mb-3 rounded-3"
+                                style="width: 100px;">
+                            <h5 class="card-title fw-bold">Troca de tela</h5>
+                            <p class="card-text">Telas quebradas ou sem touch? Resolvemos na hora com telas de alta
+                                qualidade.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3">
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Troca de Bateria</h5>
-                            <p class="card-text text-muted">Seu celular descarrega rápido? Trocamos por baterias novas
-                                com garantia.</p>
+                            <img src="assets/img/bateria.jpg" alt="Troca de bateria" class="mb-3 rounded-3"
+                                style="width: 150px;">
+                            <h5 class="card-title fw-bold">Troca de bateria</h5>
+                            <p class="card-text">Seu celular descarrega rápido? Trocamos por baterias novas com
+                                garantia.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3">
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Conector de Carga</h5>
-                            <p class="card-text text-muted">Problemas para carregar ou mau contato no cabo? Substituímos
-                                a entrada.</p>
+                            <img src="assets/img/conector.jpg" alt="Troca de conector de carga" class="mb-3 rounded-3"
+                                style="width: 150px;">
+                            <h5 class="card-title fw-bold">Conector de carga</h5>
+                            <p class="card-text">Problemas para carregar ou mau contato no cabo? Substituímos a
+                                entrada.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3">
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Reparo em Placa</h5>
-                            <p class="card-text text-muted">Análise avançada de circuitos para celulares que não ligam
-                                ou estão em curto.</p>
+                            <img src="assets/img/placa.jpg" alt="Reparo em placa" class="mb-3 rounded-3"
+                                style="width: 120px;">
+                            <h5 class="card-title fw-bold">Reparo em placa</h5>
+                            <p class="card-text">Análise avançada de circuitos para celulares que não ligam ou estão
+                                em curto.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3">
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Câmeras e Botões</h5>
-                            <p class="card-text text-muted">Substituição de lentes riscadas, câmeras com foco ruim ou
-                                botões quebrados.</p>
+                            <img src="assets/img/botao.jpg" alt="Câmeras e botões" class="mb-3 rounded-3"
+                                style="width: 100px;">
+                            <h5 class="card-title fw-bold">Câmeras e botões</h5>
+                            <p class="card-text">Substituição de lentes riscadas, câmeras com foco ruim ou botões
+                                quebrados.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm rounded-3">
+                    <div class="card h-100 rounded-3 position-relative">
+                        <span class="badge card-badge">Promoção</span>
                         <div class="card-body text-center p-4">
-                            <img src="" class="mb-3 rounded-3" style="width: 60px;">
-                            <h5 class="card-title fw-bold">Limpeza Química</h5>
-                            <p class="card-text text-muted">Seu aparelho caiu na água? Fazemos a desoxidação completa
-                                dos componentes.</p>
+                            <img src="assets/img/quimica.jpg" alt="Limpeza química" class="mb-3 rounded-3"
+                                style="width: 180px;">
+                            <h5 class="card-title fw-bold">Limpeza química</h5>
+                            <p class="card-text">Seu aparelho caiu na água? Fazemos a desoxidação completa dos
+                                componentes.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="mt-5 pt-4">
-                <h3 class="text-center mb-4 fw-bold">Dúvidas Frequentes</h3>
+            <!-- COMO FUNCIONA -->
+            <div class="mt-5 pt-4" id="diferenciais">
+                <h3 class="text-center mb-4 fw-bold section-title">Como funciona</h3>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="step-number">1</div>
+                        <h5 class="fw-bold mt-3">Diagnóstico</h5>
+                        <p>Avaliamos o problema do seu aparelho sem compromisso.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-number">2</div>
+                        <h5 class="fw-bold mt-3">Orçamento</h5>
+                        <p>Você aprova o valor antes de qualquer serviço ser iniciado.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="step-number">3</div>
+                        <h5 class="fw-bold mt-3">Reparo com garantia</h5>
+                        <p>Executamos o conserto e entregamos com 90 dias de garantia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-5 pt-4" id="duvidas">
+                <h3 class="text-center mb-4 fw-bold section-title">Dúvidas frequentes</h3>
 
                 <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item rounded-3 mb-2 border">
+                    <div class="accordion-item rounded-3 mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq1">
+                            <button class="accordion-button collapsed rounded-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq1">
                                 Quanto tempo demora o conserto?
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted">
-                                Reparos simples como troca de tela e bateria costumam ficar prontos em até 1 hora após a
-                                aprovação do orçamento.
+                            <div class="accordion-body">
+                                Reparos simples como troca de tela e bateria costumam ficar prontos em até 1 hora
+                                após a aprovação do orçamento.
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item rounded-3 mb-2 border">
+                    <div class="accordion-item rounded-3 mb-2">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2">
+                            <button class="accordion-button collapsed rounded-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq2">
                                 Os serviços têm garantia?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted">
+                            <div class="accordion-body">
                                 Sim! Todos os nossos reparos possuem garantia de 90 dias contra qualquer defeito de
                                 fabricação da peça substituída.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item rounded-3 mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Preciso agendar horário?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Não é obrigatório, mas recomendamos chamar no WhatsApp antes de vir até a loja, assim
+                                garantimos que sua peça já esteja disponível.
                             </div>
                         </div>
                     </div>
@@ -168,15 +286,62 @@
         </main>
     </div>
 
-    <footer class="text-white py-4 text-center mt-auto" id="rodape">
+    <!-- MODAL DE CONTATO -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Endereço e horário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2"><strong>Endereço:</strong> Rua Antônio do Espirito Santo, 35 — Caceia, Mairiporã/Sp
+                        <br>
+                    </p>
+                    <p class="mb-2"><strong>Telefone / WhatsApp:</strong>
+                        <a href="https://wa.me/11956975428">(11) 95697-5428</a>
+                    </p>
+                    <p class="mb-2"><strong>Horário de atendimento:</strong></p>
+                    <ul class="mb-0">
+                        <li>Segunda a sexta: 14h às 22h</li>
+                        <li>Sábado: 11h às 18h</li>
+                        <li>Domingo: fechado</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.google.com/maps/search/?api=1&query=PiterCell" target="_blank"
+                        class="btn btn-outline-contato rounded-pill">Ver no mapa</a>
+                    <a href="https://wa.me/11956975428" target="_blank"
+                        class="btn rounded-pill" id="modalWhats">Chamar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST DE CONFIRMAÇÃO -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="whatsToast" class="toast align-items-center border-0" role="status" aria-live="polite"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Abrindo o WhatsApp... fale com a gente! 
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Fechar"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 mt-auto" id="rodape">
         <div class="container">
-            <p class="mb-0 fw-bold">&copy; Assistência técnica especializada - PiterCell 2026</p>
+            <p class="mb-0 small text-center text-light">&copy; Assistência técnica especializada — PiterCell 2026</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
