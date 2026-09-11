@@ -2,11 +2,13 @@
 
 Projeto desenvolvido para a atividade prática **"Layout Responsivo com Bootstrap"**.
 
+<!--
 | | |
 |---|---|
 | **Aluno(a)** | _[Piter Miranda Macedo]_ |
 | **Disciplina** | Desenvolvimento Web III |
 | **Tema escolhido** | LeadPending de assistência técnica de celulares |
+-->
 
 ## Descrição
 
@@ -21,6 +23,8 @@ Praticar a estrutura de layout do Bootstrap 5 (menu, grid, cards) e a
 adaptação da interface para diferentes tamanhos de tela, sem back-end nem
 banco de dados.
 
+
+<!--
 ## Estrutura de pastas
 
 ```
@@ -94,6 +98,8 @@ adicionada:
 
 Não foi usado Node.js, framework de front-end, API externa nem banco de
 dados, conforme pedido no enunciado.
+
+-->
 
 ## Como executar
 
