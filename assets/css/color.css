@@ -1,0 +1,103 @@
+:root {
+    --purple-main: #3b0764;
+    --purple-dark: #1e1b4b;
+    --purple-hover: #2e0854;
+    --purple-light: #f5f3ff;
+    --bg-white: #ffffff;
+    --text-dark: #0f172a;
+    --border-gray: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-white) !important;
+    color: var(--text-dark) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+header#nav, 
+.navbar {
+    background-color: var(--purple-dark) !important;
+    border-bottom: 2px solid var(--purple-main);
+    box-shadow: 0 4px 12px rgba(30, 27, 75, 0.15) !important;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #c084fc !important;
+}
+
+.card-body {
+    color: var(--text-dark) !important;
+}
+
+.card {
+    background-color: var(--bg-white) !important;
+    border: 1px solid var(--border-gray) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -1px rgba(15, 23, 42, 0.02) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(59, 7, 100, 0.08), 0 4px 6px -2px rgba(59, 7, 100, 0.04) !important;
+    border-color: var(--purple-main) !important;
+}
+
+.card.bg-light {
+    background-color: var(--purple-light) !important;
+    border: 1px solid #ddd6fe !important;
+}
+
+#orcamento {
+    background-color: var(--purple-main) !important;
+    border-color: var(--purple-main) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#orcamento:hover {
+    background-color: var(--purple-hover) !important;
+    border-color: var(--purple-hover) !important;
+    transform: scale(1.02);
+}
+
+main .row img {
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+    padding: 6px;
+    background-color: var(--bg-white);
+    transition: border-color 0.2s ease;
+}
+
+main .row a:hover img {
+    border-color: var(--purple-main);
+}
+
+.accordion-item {
+    background-color: var(--bg-white) !important;
+    border-color: var(--border-gray) !important;
+}
+
+.accordion-button {
+    background-color: var(--bg-white) !important;
+    color: var(--text-dark) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--purple-light) !important;
+    color: var(--purple-main) !important;
+    box-shadow: none !important;
+}
+
+footer#rodape {
+    background-color: var(--purple-dark) !important;
+    color: #ffffff !important;
+    border-top: 3px solid var(--purple-main);
+    box-shadow: 0 -4px 12px rgba(30, 27, 75, 0.1) !important;
+}
